@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coordenadas", "Coordenadas\Coordenadas.csproj", "{9CFB79E9-37F4-4070-B53E-235B21334363}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordenadasTest", "CoordenadasTest\CoordenadasTest.csproj", "{7DFB207C-517A-40B1-810C-924FCC24AFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{9CFB79E9-37F4-4070-B53E-235B21334363}.Debug|x86.Build.0 = Debug|x86
 		{9CFB79E9-37F4-4070-B53E-235B21334363}.Release|x86.ActiveCfg = Release|x86
 		{9CFB79E9-37F4-4070-B53E-235B21334363}.Release|x86.Build.0 = Release|x86
+		{7DFB207C-517A-40B1-810C-924FCC24AFCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7DFB207C-517A-40B1-810C-924FCC24AFCA}.Debug|x86.Build.0 = Debug|Any CPU
+		{7DFB207C-517A-40B1-810C-924FCC24AFCA}.Release|x86.ActiveCfg = Release|Any CPU
+		{7DFB207C-517A-40B1-810C-924FCC24AFCA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
