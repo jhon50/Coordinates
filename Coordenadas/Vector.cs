@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Coordenadas
 {
-	public class Coordinate
+	public class Vector
 	{
 		private char direction;
 		private int units;
@@ -12,28 +12,22 @@ namespace Coordenadas
 		public int Units() { return this.units; }
 		public void Units(int units) { this.units = units; }
 
-		public Coordinate(char[] coords)
+		public Vector(String[] coords)
 		{
-			this.direction = coords[0];
-			this.units = Int32.Parse(coords[1].ToString());
+			this.direction = Convert.ToChar(coords[0]);
+			this.units = Int32.Parse(coords[1]);
 		}
 
-		public void ParseCoordFromString(String coord)
-		{
-			String[] arrayCoord = coord.Split(',');
-			this.direction = arrayCoord[0].ToCharArray(0, 1)[0];
-			this.units = Int32.Parse(arrayCoord[1]);
-		}
+		//public void ParseCoordFromString(String coord)
+		//{
+		//	String[] arrayCoord = coord.Split(',');
+		//	this.direction = arrayCoord[0].ToCharArray(0, 1)[0];
+		//	this.units = Int32.Parse(arrayCoord[1]);
+		//}
 
 		public void Show()
 		{
-			Console.WriteLine("direction: " + direction + " units: " + units); 
-		}
-
-		public char[] Coordinates()
-		{
-			char[] coords = { direction, (char)units};
-			return coords;
+			Console.WriteLine("direction: " + direction + " units: " + units);
 		}
 	}
 }

@@ -10,13 +10,12 @@ namespace Coordenadas
 		public void X(int x) { this.x = x; }
 
 		public int Y() { return y; }
-		public void Y(int y) { this.y = y; } 
+		public void Y(int y) { this.y = y; }
 
 		public Coordinate(int x, int y)
 		{
 			this.x = x;
 			this.y = y;
 		}
-
 	}
 }

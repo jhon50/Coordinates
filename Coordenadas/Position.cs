@@ -3,21 +3,57 @@ namespace Coordenadas
 {
 	public class Position
 	{
-		private Coordinate currentCoordinate;
+		private Coordinate coordinates;
 
-		public Position(Coordinate coordinate)
+		public Position(Coordinate coordinates)
 		{
-			this.currentCoordinate = coordinate;
+			this.coordinates = coordinates;
 		}
 
-		public char[] Coordinates()
+		public String Coordinates()
 		{
-			return this.currentCoordinate.Coordinates();
+			return "(" + coordinates.X().ToString() + ","+ coordinates.Y().ToString() + ")";
 		}
 
-		public void GoTo(Coordinate coord)
+		public void Move(Vector vector)
 		{
-			currentCoordinate.Units(currentCoordinate.Units() + coord.Units());
+			switch (vector.Direction())
+			{
+				case 'N':
+					MoveNorth(vector.Units());
+					break;
+
+				case 'S':
+					MoveSouth(vector.Units());
+					break;
+
+				case 'L':
+					MoveEast(vector.Units());
+					break;
+				case 'O':
+					MoveWest(vector.Units());
+					break;
+			}
+		}
+
+		private void MoveWest(int units)
+		{
+			coordinates.X(coordinates.X() - units);
+		}
+
+		private void MoveEast(int units)
+		{
+			coordinates.X(coordinates.X() + units);
+		}
+
+		private void MoveSouth(int units)
+		{
+			coordinates.Y(coordinates.Y() - units);
+		}
+
+		private void MoveNorth(int units)
+		{
+			coordinates.Y(coordinates.Y() + units);
 		}
 	}
 }
