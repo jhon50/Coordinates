@@ -15,6 +15,13 @@ namespace Coordenadas
 			return "(" + coordinates.X().ToString() + ","+ coordinates.Y().ToString() + ")";
 		}
 
+		/**
+		 * Apply vector to position, by doing so we are moving
+		 * the current position depending on vector direction
+		 * and units to move.
+		 * 
+		 * @param Vector vector 
+		 **/
 		public void Move(Vector vector)
 		{
 			switch (vector.Direction())
@@ -33,6 +40,8 @@ namespace Coordenadas
 				case 'O':
 					MoveWest(vector.Units());
 					break;
+				default :
+					throw new Exception();
 			}
 		}
 

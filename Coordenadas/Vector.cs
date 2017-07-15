@@ -17,17 +17,5 @@ namespace Coordenadas
 			this.direction = Convert.ToChar(coords[0]);
 			this.units = Int32.Parse(coords[1]);
 		}
-
-		//public void ParseCoordFromString(String coord)
-		//{
-		//	String[] arrayCoord = coord.Split(',');
-		//	this.direction = arrayCoord[0].ToCharArray(0, 1)[0];
-		//	this.units = Int32.Parse(arrayCoord[1]);
-		//}
-
-		public void Show()
-		{
-			Console.WriteLine("direction: " + direction + " units: " + units);
-		}
 	}
 }
